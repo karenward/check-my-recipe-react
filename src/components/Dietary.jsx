@@ -3,7 +3,6 @@ import DietaryCheckbox from "./DietaryCheckbox";
 
 class Dietary extends Component {
   state = {
-    allergiesSelected: [],
     dietarySelected: [],
     isChecked: {}
   };
@@ -16,25 +15,27 @@ class Dietary extends Component {
       {
         isChecked: checked
       },
-      this.props.updateHealth(e.target.name)
+      this.props.updateHealth(allergy)
     );
   };
 
   render() {
     const dietaryRequirements = [
-        {displayName: "peanut free", apiName: "peanut-free"},
-        {displayName: "tree nut free", apiName: "tree-nut-free"},
-        {displayName: "vegan", apiName: "vegan"}, 
-        {displayName: "vegetarian", apiName: "vegetarian"},
-        {displayName: "sugar conscious", apiName: "sugar-conscious"},
-        {displayName: "alcohol free", apiName: "alcohol-free"}];
+      { displayName: "peanut free", apiName: "peanut-free" },
+      { displayName: "tree nut free", apiName: "tree-nut-free" },
+      { displayName: "vegan", apiName: "vegan" },
+      { displayName: "vegetarian", apiName: "vegetarian" },
+      { displayName: "sugar conscious", apiName: "sugar-conscious" },
+      { displayName: "alcohol free", apiName: "alcohol-free" }
+    ];
 
     return (
       <div className="dietary-container">
         <div className="dietary-selection">
-        <form>
+          <form>
             {dietaryRequirements.map(dietary => (
               <DietaryCheckbox
+                key={dietary.displayName}
                 displayName={dietary.displayName}
                 name={dietary.apiName}
                 onChange={this.handleChange}

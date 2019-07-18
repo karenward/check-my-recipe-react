@@ -1,3 +1,7 @@
+a {
+  color: white !important;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -21,11 +25,11 @@
 }
 
 .health-checkbox {
-  padding: 5px
+  padding: 5px;
 }
 
 .checkBox {
-  margin: 0px 8px 0px 3px
+  margin: 0px 8px 0px 3px;
 }
 
 .card-title {
@@ -45,4 +49,16 @@
   padding-bottom: 10px;
 }
 
+.recipe-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.recipe-ingredients {
+  list-style: none;
+}
+
+.nutrient-container {
+  width: 30%;
+}

@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 
 class DietaryCheckbox extends Component {
-  constructor() {
-    super();
-  }
   render() {
     return (
       <label className="health-checkbox">
